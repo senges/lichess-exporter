@@ -1,0 +1,8 @@
+---
+pre-push:
+  parallel: true
+  commands:
+    black:
+      run: pipenv run -- black --diff --check .
+    ruff:
+      run: pipenv run -- ruff check .
